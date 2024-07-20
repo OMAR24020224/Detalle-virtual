@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Virtual para Ti</title>
+    <style>
+        body {
+            font-family: 'Helvetica, Arial, sans-serif';
+            background-color: #FF69B4;
+            text-align: center;
+            padding: 50px;
+            color: #fff;
+        }
+        h1 {
+            color: #fff;
+        }
+        p {
+            font-size: 18px;
+        }
+        .heart {
+            color: #ff0000;
+            font-size: 100px;
+            animation: beat 1s infinite alternate;
+        }
+        @keyframes beat {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+        .gift-box {
+            background-color: #fff;
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            margin: 20px auto;
+            cursor: pointer;
+            position: relative;
+        }
+        .gift-box p {
+            margin: 0;
+            font-size: 24px;
+            color: #ff0000;
+        }
+        .hidden-message {
+            display: none;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .song {
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Para mi querida FIORELLA</h1>
+    <div class="gift-box" onclick="showMessage()">
+        <p>🎁</p>
+        <button class="button">Abrir</button>
+    </div>
+    <div id="message" class="hidden-message">
+        <p>Quería darte un pequeño detalle para recordarte cuánto te amo y aprecio. Eres la persona más especial en mi vida y cada momento contigo es un tesoro. Espero que este detalle te haga sonreír y sientas lo especial que eres para mí.</p>
+        <div class="heart">❤️</div>
+        <p>Con mucho amor,<br> OMAR</p>
+        <div class="song">
+            <p>Escucha esta canción que me recuerda a ti:</p>
+            <a href="https://music.apple.com/pe/album/hasta-que-me-olvides/100986900?i=100986866&l=en-GB" target="_blank">Hasta Que Me Olvides</a>
+        </div>
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
